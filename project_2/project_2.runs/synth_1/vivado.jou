@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Jan 16 17:44:39 2024
+# Process ID: 23416
+# Current directory: C:/Users/Huy/Desktop/Vivado/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log root.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source root.tcl
+# Log file: C:/Users/Huy/Desktop/Vivado/project_2/project_2.runs/synth_1/root.vds
+# Journal file: C:/Users/Huy/Desktop/Vivado/project_2/project_2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-QBEKAKR, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 8412 MB
+#-----------------------------------------------------------
+source root.tcl -notrace

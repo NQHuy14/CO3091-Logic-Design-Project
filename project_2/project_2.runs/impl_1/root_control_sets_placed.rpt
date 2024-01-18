@@ -1,0 +1,114 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Jan 16 17:46:13 2024
+| Host         : DESKTOP-QBEKAKR running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file root_control_sets_placed.rpt
+| Design       : root
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    36 |
+|    Minimum number of control sets                        |    36 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   137 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    36 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     8 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    12 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              48 |           22 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             185 |           55 |
+| Yes          | No                    | No                     |             110 |           50 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              24 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |               Enable Signal              |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG       | runClock/nolabel_line42/button_debounced |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line43/button_debounced |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runmmdd/nolabel_line40/button_debounced  |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runmmdd/nolabel_line39/button_debounced  |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runmmdd/nolabel_line38/button_debounced  |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runmmdd/nolabel_line37/button_debounced  |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line40/button_debounced |                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line41/button_debounced |                                          |                1 |              1 |         1.00 |
+|  Display1/led__0_n_0 |                                          |                                          |                2 |              4 |         2.00 |
+|  Display2/led__0_n_0 |                                          |                                          |                1 |              4 |         4.00 |
+|  Display3/led__0_n_0 |                                          |                                          |                1 |              4 |         4.00 |
+|  Display0/led__0_n_0 |                                          |                                          |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG       | runmmdd/cmonth[5]_i_1_n_0                | runmmdd/nolabel_line38/status_reg[0]_0   |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG       | getseconnd/enable_reg_0                  | runClock/a_second[5]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line43/value_reg_0[0]   |                                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG       | runmmdd/nolabel_line38/status_reg[1][0]  |                                          |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG       | runmmdd/nolabel_line38/E[0]              |                                          |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line42/E[0]             |                                          |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line43/status_reg[1][0] |                                          |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG       | runClock/nolabel_line43/E[0]             |                                          |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG       | getseconnd/E[0]                          | nolabel_line86/firstCounter[6]_i_1_n_0   |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG       | getseconnd/startCount_reg[0]             | nolabel_line86/firstCounter[6]_i_1_n_0   |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG       | runmmdd/cmonth[5]_i_1_n_0                |                                          |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG       | runClock/cminutes[5]_i_1_n_0             |                                          |                4 |             12 |         3.00 |
+|  clk_IBUF_BUFG       | Dled1[3]_i_1_n_0                         |                                          |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG       |                                          | runClock/nolabel_line41/button_debounced |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runmmdd/nolabel_line39/button_debounced  |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runmmdd/nolabel_line38/button_debounced  |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runmmdd/nolabel_line37/button_debounced  |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runClock/nolabel_line40/button_debounced |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runmmdd/nolabel_line40/button_debounced  |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runClock/nolabel_line43/button_debounced |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | runClock/nolabel_line42/button_debounced |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG       |                                          | getseconnd/counter[24]_i_1_n_0           |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG       |                                          |                                          |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG       | runClock/controlBuzzer                   |                                          |                8 |             32 |         4.00 |
++----------------------+------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+
+

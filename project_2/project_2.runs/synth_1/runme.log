@@ -1,0 +1,314 @@
+
+*** Running vivado
+    with args -log root.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source root.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source root.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 475.191 ; gain = 178.195
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/utils_1/imports/synth_1/Blink_LED.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/utils_1/imports/synth_1/Blink_LED.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top root -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16608
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1339.867 ; gain = 439.730
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'root' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/root.v:23]
+INFO: [Synth 8-6157] synthesizing module 'getSecond' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/getSecond.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'getSecond' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/getSecond.v:23]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/display.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/display.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'display' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/display.v:23]
+INFO: [Synth 8-6157] synthesizing module 'runHourMin' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:23]
+INFO: [Synth 8-6157] synthesizing module 'buttonHandler' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/buttonHandler.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'buttonHandler' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/buttonHandler.v:23]
+WARNING: [Synth 8-6090] variable 'start' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:59]
+WARNING: [Synth 8-6090] variable 'cminutes' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:105]
+WARNING: [Synth 8-6090] variable 'cminutes' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:106]
+WARNING: [Synth 8-6090] variable 'chour' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:116]
+WARNING: [Synth 8-6090] variable 'chour' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:118]
+WARNING: [Synth 8-6090] variable 'firstTImeChange' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'runHourMin' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runHourMin.v:23]
+INFO: [Synth 8-6157] synthesizing module 'runMMDD' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:23]
+WARNING: [Synth 8-6090] variable 'cmonth' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:61]
+WARNING: [Synth 8-6090] variable 'cmonth' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:63]
+WARNING: [Synth 8-6090] variable 'cday' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:69]
+WARNING: [Synth 8-6090] variable 'cday' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:73]
+WARNING: [Synth 8-6090] variable 'cday' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:79]
+WARNING: [Synth 8-6090] variable 'cday' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:85]
+WARNING: [Synth 8-6090] variable 'cday' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'runMMDD' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/root.v:84]
+INFO: [Synth 8-6157] synthesizing module 'turnSomeModule' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/turnSomeModule.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'turnSomeModule' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/turnSomeModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'runYear' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runYear.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'runYear' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runYear.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'buzzer' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/buzzer.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'buzzer' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/buzzer.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'root' (0#1) [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/root.v:23]
+WARNING: [Synth 8-3848] Net turnOffFirstTime in module/entity runMMDD does not have driver. [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/runMMDD.v:28]
+WARNING: [Synth 8-3848] Net firstTimeOpen in module/entity root does not have driver. [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/root.v:47]
+WARNING: [Synth 8-3848] Net firstTimeOpenYear in module/entity root does not have driver. [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/root.v:48]
+WARNING: [Synth 8-7129] Port btn[3] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[0] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stopCount in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port turnOfFirstTime in module turnSomeModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port firstTimerCursor in module turnSomeModule is either unconnected or has no load
+WARNING: [Synth 8-7129] Port turnOffFirstTime in module runMMDD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port firstTimeOpen in module runMMDD is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.156 ; gain = 555.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.156 ; gain = 555.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.156 ; gain = 555.020
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1455.156 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/constrs_1/imports/Downloads/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/constrs_1/imports/Downloads/Arty-Z7-20-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/constrs_1/imports/Downloads/Arty-Z7-20-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/root_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/root_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/constrs_1/imports/Downloads/Arty-Z7-20-Extension-board-Master.xdc]
+Finished Parsing XDC File [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/constrs_1/imports/Downloads/Arty-Z7-20-Extension-board-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/constrs_1/imports/Downloads/Arty-Z7-20-Extension-board-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/root_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/root_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1481.469 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1481.469 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [C:/Users/Huy/Desktop/Vivado/project_2/project_2.srcs/sources_1/new/display.v:28]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 8     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 14    
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               20 Bit    Registers := 8     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 12    
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 37    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 94    
+	   3 Input    6 Bit        Muxes := 2     
+	  11 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 51    
+	   3 Input    1 Bit        Muxes := 9     
+	   5 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 5     
+	   8 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port btn[3] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[0] in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stopCount in module counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port turnOffFirstTime in module runMMDD is either unconnected or has no load
+WARNING: [Synth 8-7129] Port firstTimeOpen in module runMMDD is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1481.469 ; gain = 581.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    54|
+|3     |LUT1   |    12|
+|4     |LUT2   |    19|
+|5     |LUT3   |    47|
+|6     |LUT4   |   102|
+|7     |LUT5   |   102|
+|8     |LUT6   |   132|
+|9     |MUXF7  |     7|
+|10    |FDRE   |   351|
+|11    |LD     |    16|
+|12    |IBUF   |     8|
+|13    |OBUF   |    18|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1486.117 ; gain = 559.668
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.117 ; gain = 585.980
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1498.191 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1501.832 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  LD => LDCE: 16 instances
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: e32b4c8a
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 1501.832 ; gain = 1018.672
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1501.832 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Huy/Desktop/Vivado/project_2/project_2.runs/synth_1/root.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file root_utilization_synth.rpt -pb root_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 16 17:45:34 2024...

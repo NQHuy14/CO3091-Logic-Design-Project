@@ -1,0 +1,32 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 11/29/2023 04:19:56 PM
+// Design Name: 
+// Module Name: stopCount
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module stopCount(input clk,input [3:0]btn,output reg startCount,output reg stopCount,output reg resetCount);
+  
+        always @(posedge clk) begin 
+            if(btn[1]==1'b1)begin 
+                resetCount <=1'b0;
+                startCount<=1'b0;
+                stopCount<=1'b1;
+            end 
+        end 
+endmodule
